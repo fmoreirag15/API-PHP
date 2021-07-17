@@ -4,7 +4,7 @@ include_once 'db.php';
 
 class examen extends DB{
     
-    function obtenerPeliculas(){        
+    function obtenerExamenN(){        
         $query = $this->connect()->query('SELECT * FROM examenes');
         return $query;
     }

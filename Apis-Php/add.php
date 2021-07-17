@@ -1,6 +1,5 @@
 <?php
-
-    include_once 'apiExamen.php';
+    include_once 'apiExamen.php';    
     
     $api = new apiExamen();
     $nombre = '';

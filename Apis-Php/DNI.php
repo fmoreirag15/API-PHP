@@ -1,6 +1,6 @@
 <?php
-    include_once 'apiMonedas.php';    
-    $api = new apiMonedas();
+    include_once 'apiExamen.php';    
+    $api = new apiExamen();
     header('Access-Control-Allow-Origin: *');       
     $DNI = $_GET['DNI'];        
     $api->getByDNI($DNI);

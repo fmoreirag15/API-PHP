@@ -1,16 +1,16 @@
 <?php
 
-include_once 'monedas.php';
+include_once 'examen.php';
 
-class apiMonedas{
+class apiExamen{
 
 
     function getAll(){
-        $pelicula = new monedas();
+        $pelicula = new examen();
         $peliculas = array();
         $peliculas["items"] = array();
 
-        $res = $pelicula->obtenerExamen();
+        $res = $pelicula->obtenerExamenN();
 
         if($res->rowCount()){
             while ($row = $res->fetch(PDO::FETCH_ASSOC)){
@@ -47,7 +47,7 @@ class apiMonedas{
     }
 
     function getByname($name){
-        $pelicula = new monedas();
+        $pelicula = new examen();
         $peliculas = array();
         $peliculas["items"] = array();
 
@@ -85,7 +85,7 @@ class apiMonedas{
         }
     }
     function getByDNI($DNI){
-        $pelicula = new monedas();
+        $pelicula = new examen();
         $peliculas = array();
         $peliculas["items"] = array();
 
@@ -122,11 +122,11 @@ class apiMonedas{
         }
     }
     function getById($id){
-        $pelicula = new monedas();
+        $pelicula = new examen();
         $peliculas = array();
         $peliculas["items"] = array();
 
-        $res = $pelicula->obtenerMonedas($id);
+        $res = $pelicula->obtenerExamen($id);
 
         if($res->rowCount() == 1){
             $row = $res->fetch();
@@ -161,7 +161,7 @@ class apiMonedas{
     }
 
     function add($item){
-        $pelicula = new monedas();
+        $pelicula = new examen();
 
         $res = $pelicula->nuevaPelicula($item);
         $this->exito('Nueva pelicula registrada');
